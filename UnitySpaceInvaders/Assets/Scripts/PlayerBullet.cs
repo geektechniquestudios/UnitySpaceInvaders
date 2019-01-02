@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerBullet : MonoBehaviour
 {
     public float speed = 30;
     private Rigidbody2D rigidBody;
+    public Sprite explodedAlienImage;
     void Start()
     {
         rigidBody = GetComponent<Rigidbody2D>();
@@ -19,10 +21,39 @@ public class PlayerBullet : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        if(collision.tag == "Alien")
+        {
+            SoundManager.Instance.PlayOneShot
+                (SoundManager.Instance.alienDies);
+            IncreaseTextUIScore();
+
+            collision.GetComponent<SpriteRenderer>().sprite =
+                explodedAlienImage;
+
+            Destroy(gameObject);
+
+            Object.Destroy(collision.gameObject, 0.5f);
+        }
+
+        if(collision.tag == "Shield")
+        {
+            Destroy(gameObject);
+            Object.Destroy(collision.gameObject);
+        }
     }
 
     void OnBecameInvisible()
     {
         Destroy(gameObject);
+    }
+void IncreaseTextUIScore()
+    {
+        var textUIComp = GameObject.Find("Score").GetComponent<Text>();
+
+        int score = int.Parse(textUIComp.text);
+
+        score += 10;
+
+        textUIComp.text = score.ToString();
     }
 }
