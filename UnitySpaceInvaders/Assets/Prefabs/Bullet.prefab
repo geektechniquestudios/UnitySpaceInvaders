@@ -142,3 +142,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 30
+  explodedAlienImage: {fileID: 21300012, guid: e9df9ad46f6129a479086cc017a7a119, type: 3}
