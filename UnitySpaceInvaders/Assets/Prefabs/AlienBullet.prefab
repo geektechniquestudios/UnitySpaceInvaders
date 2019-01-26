@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1791191256716554584}
   - component: {fileID: 7807648180550791929}
   - component: {fileID: 2060604783041155826}
+  - component: {fileID: 316518478226907008}
   - component: {fileID: 1191553814785935062}
   m_Layer: 0
   m_Name: AlienBullet
@@ -94,6 +95,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6af97d9df49de1747956edaf410de574, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 30
+  explodedShipImage: {fileID: 0}
 --- !u!50 &2060604783041155826
 Rigidbody2D:
   serializedVersion: 4
@@ -115,6 +118,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!114 &316518478226907008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7626190768419508868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6af97d9df49de1747956edaf410de574, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 30
+  explodedShipImage: {fileID: 21300014, guid: e9df9ad46f6129a479086cc017a7a119, type: 3}
 --- !u!61 &1191553814785935062
 BoxCollider2D:
   m_ObjectHideFlags: 0
