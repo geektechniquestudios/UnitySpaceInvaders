@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Enimies : MonoBehaviour
 {
+    public float speed = 10;
+    public Rigidbody2D rigidBody;
+
     // Start is called before the first frame update
     void Start()
     {
