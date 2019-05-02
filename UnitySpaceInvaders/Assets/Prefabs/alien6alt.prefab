@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 5984591647976922952}
   - component: {fileID: 826514129606812269}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: alien6alt
-  m_TagString: Untagged
+  m_TagString: Alien
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
